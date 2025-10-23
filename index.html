@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel de Cadastro e Consulta de Usuários (Cards)</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>Painel de Usuários</h1>
+      <p class="sub">Cadastrar, buscar e gerenciar colaboradores — versão cards</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="painel-cadastro">
+      <form id="form-usuario" novalidate>
+        <fieldset>
+          <legend>Cadastro de Usuário</legend>
+
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" placeholder="Ex.: Maria Silva" required />
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="exemplo@empresa.com" required />
+
+          <label for="idade">Idade</label>
+          <input id="idade" name="idade" type="number" min="16" max="120" placeholder="Ex.: 30" required />
+
+          <label for="cargo">Cargo</label>
+          <input id="cargo" name="cargo" type="text" placeholder="Ex.: Analista de RH" required />
+
+          <button id="btn-cadastrar" type="submit">Cadastrar Usuário</button>
+        </fieldset>
+      </form>
+
+      <div class="busca">
+        <label for="filtro">Buscar por nome</label>
+        <input id="filtro" type="text" placeholder="Digite o nome para filtrar..." />
+      </div>
+    </section>
+
+    <section id="lista-usuarios" class="lista-usuarios" aria-live="polite">
+      <!-- Cards serão inseridos aqui dinamicamente -->
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <small>Projeto Final — Painel de Cadastro e Consulta de Usuários. Desenvolvido por Luiz Amorim.</small>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
